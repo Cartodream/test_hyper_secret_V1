@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
-    --secondary: #10b981;
-    --gradient-start: #2563eb;
-    --gradient-end: #10b981;
-    --dark: #1e293b;
-    --light: #f8fafc;
-    --text: #334155;
-    --border: #e2e8f0;
+    --primary: #2d6e4a;
+    --primary-dark: #1e5a3a;
+    --secondary: #c67424;
+    --gradient-start: #2d6e4a;
+    --gradient-end: #3d8b5c;
+    --dark: #3d2817;
+    --light: #f5f3e8;
+    --text: #3d2817;
+    --border: #9a9d3a;
 }
 
 * {
@@ -51,24 +51,49 @@ nav {
     padding: 0 2rem;
 }
 
-.logo {
+.social-icons {
     display: flex;
-    align-items: center;
     gap: 0.8rem;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--primary);
 }
 
-.logo img {
-    height: 40px;
-    width: 35px;
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: white;
+}
+
+.social-icons a:nth-child(1) {
+    background: #1877f2;
+}
+
+.social-icons a:nth-child(2) {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
+}
+
+.logo-nav {
+    margin: 0 1rem;
+}
+
+.logo-nav img {
+    height: 70px;
+    width: auto;
 }
 
 nav a {
@@ -675,6 +700,19 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+
+    .social-icons {
+        order: 3;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-nav {
+        display: none;
     }
 
     .hero {
